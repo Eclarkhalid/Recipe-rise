@@ -20,6 +20,7 @@ import RightHeader from './components/rightHeader.tsx'
 import Profile from './pages/profile.tsx'
 
 import { UserContext, UserContextProvider } from './userContext.tsx'
+import PostPage from './pages/postPage.tsx'
 
 const Layout = () => {
   const { setUserInfo, userInfo } = useContext(UserContext) || {};
@@ -93,6 +94,10 @@ const router = createBrowserRouter([
       {
         path: '/create',
         element: <Create />,
+      },
+      {
+        path: "/post/:id",
+        element: <PostPage />,
       },
       {
         path: '/profile',
